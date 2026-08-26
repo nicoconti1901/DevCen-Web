@@ -1172,6 +1172,63 @@ body.banner-off .sticky-banner {
   margin: 22px 0 0;
 }
 
+.who-section {
+  padding: 36px 0 44px;
+}
+
+.who-section::before {
+  top: 32px;
+}
+
+.who-strip {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) minmax(0, 1fr);
+  gap: 28px 36px;
+  align-items: center;
+  max-width: 920px;
+}
+
+.who-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1448 / 1086;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 106, 0, 0.45);
+  box-shadow: 0 0 0 1px rgba(255, 106, 0, 0.12), 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+.who-strip h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  margin-bottom: 14px;
+}
+
+.who-creds {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.who-creds li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 0.95rem;
+  color: var(--heading);
+}
+
+.who-creds span {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+}
+
 .hero-system {
   grid-area: system;
   position: relative;
@@ -2493,6 +2550,7 @@ body.banner-off .sticky-banner {
   .hero-stage,
   .split-head,
   .work-intro,
+  .who-strip,
   .iso-layout,
   .contact-layout,
   .capacity-field,

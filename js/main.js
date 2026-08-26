@@ -337,7 +337,7 @@ document.querySelectorAll(".circuit-break").forEach((el) => {
   `;
 });
 
-document.querySelectorAll(".split-head, .work-intro, .iso-layout, .proto-player, .work-tile, .orbit-stage, .contact-layout > *").forEach((el) => {
+document.querySelectorAll(".split-head, .work-intro, .who-strip, .iso-layout, .proto-player, .work-tile, .orbit-stage, .contact-layout > *").forEach((el) => {
   el.classList.add("reveal");
 });
 
