@@ -1,0 +1,8 @@
+.git
+.wrangler
+node_modules
+.venv
+tools
+*.py
+.env
+.env.*

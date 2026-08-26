@@ -1,0 +1,11 @@
+{
+  "name": "devcen-web",
+  "compatibility_date": "2026-08-26",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash"
+  }
+}

@@ -1,4 +1,0 @@
-# Apex → www (Cloudflare Pages)
-https://dev-cen.com/* https://www.dev-cen.com/:splat 301
-http://dev-cen.com/* https://www.dev-cen.com/:splat 301
-http://www.dev-cen.com/* https://www.dev-cen.com/:splat 301
