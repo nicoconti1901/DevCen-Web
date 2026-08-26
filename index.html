@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DevCen Connected Systems: desarrollo de aplicaciones, campus virtuales, automatización empresarial, páginas web, plataformas corporativas y sistemas de gestión integrada ISO 9001, 14001 y 45001."
+    />
+    <meta name="theme-color" content="#070707" />
+    <meta property="og:title" content="DevCen Connected Systems" />
+    <meta
+      property="og:description"
+      content="Software a medida, automatización y sistemas de gestión integrada ISO."
+    />
+    <meta property="og:image" content="assets/fotoperfil.png" />
+    <title>DevCen Connected Systems</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="scroll-spine" aria-hidden="true">
+      <span class="scroll-fill"></span>
+      <i class="scroll-node"></i>
+    </div>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <nav class="section-rail" aria-label="Índice de secciones">
+      <a href="#inicio" data-rail="inicio">00</a>
+      <a href="#proyectos" data-rail="proyectos">01</a>
+      <a href="#iso" data-rail="iso">02</a>
+      <a href="#orbita" data-rail="orbita">03</a>
+      <a href="#metodo" data-rail="metodo">04</a>
+      <a href="#contacto" data-rail="contacto">05</a>
+    </nav>
+
+    <header class="site-header" id="header">
+      <div class="header-inner">
+        <a class="brand" href="#inicio">
+          <img src="assets/mark.svg" alt="" width="36" height="36" />
+          <span>
+            <strong>DEVCEN</strong>
+            <small>CONNECTED SYSTEMS</small>
+          </span>
+        </a>
+        <div class="nav-code" aria-hidden="true">
+          <svg viewBox="0 0 72 36" fill="none">
+            <rect class="code-block" x="4" y="6" width="18" height="10" />
+            <rect class="code-block code-block-2" x="28" y="6" width="14" height="10" />
+            <rect class="code-block code-block-3" x="48" y="6" width="20" height="10" />
+            <rect class="code-block" x="10" y="20" width="22" height="10" />
+            <rect class="code-block code-block-2" x="38" y="20" width="26" height="10" />
+            <path class="code-wire" d="M13 16 V20" />
+            <path class="code-wire" d="M35 16 V20" />
+            <path class="code-wire" d="M58 16 H50 V20" />
+            <circle class="code-dot" r="2.2" cx="13" cy="11">
+              <animate attributeName="cx" values="13;35;58;49;21;13" dur="3.2s" repeatCount="indefinite" />
+              <animate attributeName="cy" values="11;11;11;25;25;11" dur="3.2s" repeatCount="indefinite" />
+            </circle>
+          </svg>
+        </div>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <a href="#proyectos"><i>01</i> Trabajos</a>
+          <a href="#iso"><i>02</i> ISO</a>
+          <a href="#orbita"><i>03</i> Órbita</a>
+          <a href="#metodo"><i>04</i> Método</a>
+          <a href="#contacto"><i>05</i> Enlace</a>
+        </nav>
+        <p class="nav-ticker" aria-live="polite">
+          <span id="nav-ticker"></span>
+        </p>
+      </div>
+    </header>
+
+    <aside class="sticky-banner" id="sticky-banner">
+      <p class="pay-motto">Facilidades de pago acorde a tu presupuesto</p>
+      <p id="sticky-copy">Pagás según el alcance que cerramos, no un paquete cerrado.</p>
+      <button type="button" class="sticky-close" id="sticky-close" aria-label="Cerrar aviso">×</button>
+    </aside>
+
+    <main id="contenido">
+      <section class="hero is-cover" id="inicio">
+        <div class="hero-covers" aria-hidden="true">
+          <div class="cover is-on">
+            <img class="cover-photo" src="assets/hero5.png" alt="" />
+            <div class="cover-wash"></div>
+            <svg class="cortex" viewBox="0 0 900 640" fill="none" aria-hidden="true">
+              <path class="syn" id="syn-in" d="M90 470 C180 430 260 360 360 300 C410 270 440 260 480 250" />
+              <path class="syn" id="syn-code" d="M480 250 C560 180 640 130 760 110" />
+              <path class="syn" id="syn-run" d="M480 250 C590 250 690 270 820 300" />
+              <path class="syn" id="syn-iso" d="M480 250 C540 340 620 430 710 520" />
+              <circle class="syn-node syn-hub" cx="480" cy="250" r="7" />
+              <circle class="syn-node" cx="90" cy="470" r="4.2" />
+              <circle class="syn-node" cx="760" cy="110" r="4.2" />
+              <circle class="syn-node" cx="820" cy="300" r="4.2" />
+              <circle class="syn-node" cx="710" cy="520" r="4.2" />
+              <circle class="syn-pulse" r="3.6">
+                <animateMotion dur="3.2s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#syn-in" />
+                </animateMotion>
+              </circle>
+              <circle class="syn-pulse" r="3.2">
+                <animateMotion dur="4s" begin="0.4s" repeatCount="indefinite">
+                  <mpath href="#syn-code" />
+                </animateMotion>
+              </circle>
+              <circle class="syn-pulse" r="3.2">
+                <animateMotion dur="3.6s" begin="0.8s" repeatCount="indefinite">
+                  <mpath href="#syn-run" />
+                </animateMotion>
+              </circle>
+              <circle class="syn-pulse" r="3.2">
+                <animateMotion dur="4.4s" begin="1.1s" repeatCount="indefinite">
+                  <mpath href="#syn-iso" />
+                </animateMotion>
+              </circle>
+              <text class="syn-tag" x="58" y="498">PROCESOS</text>
+              <text class="syn-tag syn-tag-hub" x="498" y="238">SOLUCIÓN</text>
+              <text class="syn-tag" x="748" y="92">APPS</text>
+              <text class="syn-tag" x="790" y="286">AUTOMATIZAR</text>
+              <text class="syn-tag" x="688" y="548">CUMPLIR ISO</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="container hero-stage hero-stage-solo">
+          <div class="hero-copy">
+            <p class="console-line" data-type="devcen@systems — operador de software e ISO"></p>
+            <h1 class="hero-axis">
+              <span class="axis-line">Conecto operación, evidencia y código</span>
+              <span class="axis-sub">en un solo sistema.</span>
+            </h1>
+            <p class="lead">
+              Desarrollo aplicaciones, campus virtuales, automatización y
+              plataformas corporativas. También construyo sistemas de gestión
+              integrada bajo ISO 9001, 14001 y 45001.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contacto">Solicitar una reunión</a>
+              <a class="btn btn-ghost" href="#proyectos">Ver trabajos</a>
+            </div>
+            <p class="pay-ribbon">Facilidades de pago acorde a tu presupuesto</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="circuit-break" aria-hidden="true"></div>
+
+      <section class="section" id="proyectos">
+        <div class="container work-intro">
+          <div>
+            <p class="eyebrow">01 / Trabajos</p>
+            <h2>Seis sistemas. Una sola oferta.</h2>
+          </div>
+          <ol class="work-cues">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Elegí la pieza</strong>
+                App, campus, automatización, ISO, web o portal.
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Mirá cómo se usa</strong>
+                Fotos del entorno real, no un listado de features.
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Pedí un alcance</strong>
+                Si encaja, el siguiente paso es presupuesto.
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="container work-board">
+          <button type="button" class="work-tile project-open" data-project="app">
+            <img src="assets/projects/app.jpg" alt="Aplicación móvil empresarial con panel de control" />
+            <div class="work-body">
+              <span>01</span>
+              <div>
+                <p>Aplicación</p>
+                <h3>App de operación y control</h3>
+                <small>De planillas a un sistema diario: flujos, roles, indicadores y alertas.</small>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="work-tile project-open" data-project="campus">
+            <img src="assets/projects/campus.jpg" alt="Campus virtual con cursos y seguimiento" />
+            <div class="work-body">
+              <span>02</span>
+              <div>
+                <p>Formación</p>
+                <h3>Campus virtual corporativo</h3>
+                <small>Quién avanzó, qué evaluó y qué evidencia queda para el equipo o la institución.</small>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="work-tile project-open" data-project="auto">
+            <img src="assets/projects/automatizacion.jpg" alt="Tablero de automatización de procesos" />
+            <div class="work-body">
+              <span>03</span>
+              <div>
+                <p>Operaciones</p>
+                <h3>Automatización de procesos</h3>
+                <small>Los sistemas actuales se hablan: menos carga manual y más control del flujo real.</small>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="work-tile project-open" data-project="iso">
+            <img src="assets/projects/iso.jpg" alt="Sistema de gestión integrada ISO" />
+            <div class="work-body">
+              <span>04</span>
+              <div>
+                <p>SGI</p>
+                <h3>Gestión integrada ISO</h3>
+                <small>9001, 14001 y 45001 como operación: no conformidades, riesgos y auditoría.</small>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="work-tile project-open" data-project="web">
+            <img src="assets/projects/web.jpg" alt="Sitio web institucional" />
+            <div class="work-body">
+              <span>05</span>
+              <div>
+                <p>Web</p>
+                <h3>Sitio institucional</h3>
+                <small>Presencia que explica el valor, ordena la oferta y abre la conversación comercial.</small>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="work-tile project-open" data-project="plataforma">
+            <img src="assets/projects/plataforma.jpg" alt="Plataforma corporativa a medida" />
+            <div class="work-body">
+              <span>06</span>
+              <div>
+                <p>Plataforma</p>
+                <h3>Portal corporativo a medida</h3>
+                <small>Intranet o portal interno: módulos, permisos y reportes alineados a la organización.</small>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <div class="circuit-break" aria-hidden="true"></div>
+
+      <section class="section iso-section" id="iso">
+        <div class="container iso-layout">
+          <div>
+            <p class="eyebrow">02 / Normas</p>
+            <h2>Tres normas, un grafo.</h2>
+            <p class="lead">
+              El SGI no es un diploma. Es un sistema que registra, conecta y
+              deja evidencia. Calidad, ambiente y seguridad se tratan como
+              nodos de la misma red.
+            </p>
+          </div>
+          <div class="iso-graph">
+            <svg class="iso-svg" viewBox="0 0 420 320" role="img" aria-label="Grafo ISO 9001, 14001 y 45001">
+              <line class="iso-edge" x1="210" y1="58" x2="78" y2="250" />
+              <line class="iso-edge" x1="210" y1="58" x2="342" y2="250" />
+              <line class="iso-edge" x1="78" y1="250" x2="342" y2="250" />
+              <line class="iso-edge" x1="210" y1="58" x2="210" y2="168" />
+              <line class="iso-edge" x1="78" y1="250" x2="210" y2="168" />
+              <line class="iso-edge" x1="342" y1="250" x2="210" y2="168" />
+              <circle class="iso-dot core" cx="210" cy="58" r="10" />
+              <circle class="iso-dot" cx="78" cy="250" r="8" />
+              <circle class="iso-dot" cx="342" cy="250" r="8" />
+              <circle class="iso-dot mid" cx="210" cy="168" r="6" />
+            </svg>
+            <div class="iso-node n9001">
+              <strong>9001</strong>
+              <span>Calidad</span>
+            </div>
+            <div class="iso-node n14001">
+              <strong>14001</strong>
+              <span>Ambiente</span>
+            </div>
+            <div class="iso-node n45001">
+              <strong>45001</strong>
+              <span>SST</span>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <dl class="spec-bar">
+            <div data-anchor="nodo">
+              <i></i>
+              <dt>Nodo</dt>
+              <dd>Desarrollador</dd>
+            </div>
+            <div data-anchor="iso">
+              <i></i>
+              <dt>Estándares</dt>
+              <dd>9001 · 14001 · 45001</dd>
+            </div>
+            <div data-anchor="entrega">
+              <i></i>
+              <dt>Entrega</dt>
+              <dd>Sistema operable</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <div class="circuit-break" aria-hidden="true"></div>
+
+      <section class="section orbit-section" id="orbita">
+        <div class="container split-head">
+          <div>
+            <p class="eyebrow">03 / Órbita</p>
+            <h2>Quién entra en el sistema.</h2>
+          </div>
+          <p>
+            No es otra lista de productos. Es el mapa de personas que el
+            sistema tiene que sostener: quién decide, quién opera, quién
+            audita y quién usa. Distinto al grafo de normas.
+          </p>
+        </div>
+        <div class="container orbit-stage">
+          <div class="orbit-scan" aria-hidden="true"></div>
+          <svg class="orbit-links" viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M250 160 C400 260 400 260 500 360" />
+            <path d="M750 160 C600 260 600 260 500 360" />
+            <path d="M250 560 C400 460 400 460 500 360" />
+            <path d="M750 560 C600 460 600 460 500 360" />
+            <circle class="orbit-packet" r="4">
+              <animateMotion dur="3.4s" repeatCount="indefinite" path="M250 160 C400 260 400 260 500 360" />
+            </circle>
+            <circle class="orbit-packet" r="4">
+              <animateMotion dur="3.8s" begin="0.5s" repeatCount="indefinite" path="M750 160 C600 260 600 260 500 360" />
+            </circle>
+            <circle class="orbit-packet" r="4">
+              <animateMotion dur="3.6s" begin="0.9s" repeatCount="indefinite" path="M250 560 C400 460 400 460 500 360" />
+            </circle>
+            <circle class="orbit-packet" r="4">
+              <animateMotion dur="4s" begin="0.2s" repeatCount="indefinite" path="M750 560 C600 460 600 460 500 360" />
+            </circle>
+          </svg>
+          <article class="sat sat-n">
+            <em>01 · Decide</em>
+            <b>Dirección</b>
+            <p>Aprueba qué se construye y cuándo cierra cada etapa.</p>
+            <small>Ve costos, hitos y el alcance escrito.</small>
+          </article>
+          <article class="sat sat-e">
+            <em>02 · Opera</em>
+            <b>Planta y equipos</b>
+            <p>Usan el sistema en el día: cargas, alertas y seguimiento.</p>
+            <small>Reciben pantallas simples, no otra planilla.</small>
+          </article>
+          <div class="orbit-core">
+            <strong>DEVCEN</strong>
+            <span>Conecta roles</span>
+          </div>
+          <article class="sat sat-w">
+            <em>03 · Audita</em>
+            <b>Calidad / SST</b>
+            <p>Piden rastro: no conformidades, riesgos y pruebas.</p>
+            <small>Entran al SGI, no a una carpeta suelta.</small>
+          </article>
+          <article class="sat sat-s">
+            <em>04 · Usa</em>
+            <b>Usuarios internos</b>
+            <p>Piden, aprueban y consultan con su rol.</p>
+            <small>Ven solo lo que les corresponde.</small>
+          </article>
+        </div>
+      </section>
+
+      <div class="circuit-break" aria-hidden="true"></div>
+
+      <section class="section method-section" id="metodo">
+        <div class="container split-head">
+          <div>
+            <p class="eyebrow">04 / Protocolo</p>
+            <h2>Cinco etapas. Un cierre en cada una.</h2>
+          </div>
+          <p>
+            No es un método genérico: es un protocolo de entrega. Cada etapa
+            tiene entrada, salida, tiempo estimado y un cierre escrito antes
+            de pasar a la siguiente.
+          </p>
+        </div>
+        <div class="container">
+          <div class="proto-player" id="proto-player">
+            <ol class="proto-rail" id="proto-rail"></ol>
+            <div class="proto-screen">
+              <p class="proto-kicker" id="proto-kicker">ETAPA 01 / 05</p>
+              <h3 id="proto-title">Diagnóstico</h3>
+              <p class="proto-plain" id="proto-plain"></p>
+              <dl class="proto-facts" id="proto-facts"></dl>
+              <div class="proto-meter" aria-hidden="true"><i id="proto-fill"></i></div>
+              <div class="proto-controls">
+                <button type="button" id="proto-prev">Anterior</button>
+                <button type="button" id="proto-next">Siguiente etapa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="circuit-break" aria-hidden="true"></div>
+
+      <section class="section contact-section" id="contacto">
+        <div class="container contact-layout">
+          <div>
+            <p class="eyebrow">05 / Enlace</p>
+            <h2>Pedí presupuesto. La pregunta no tiene que estar perfecta.</h2>
+            <p class="lead">
+              Contá el problema, el estándar o el producto. La primera respuesta
+              es un alcance escrito: qué se puede construir, qué no, y cómo se
+              gestiona de punta a punta. Sin paquete cerrado y sin compromiso
+              hasta que el alcance cierre.
+            </p>
+            <p class="pay-callout">Facilidades de pago acorde a tu presupuesto</p>
+            <ol class="enlace-flow">
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Consulta</strong>
+                  Escribí aunque no tengas un brief. Con el contexto alcanza para abrir el canal.
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>Alcance</strong>
+                  Te devuelvo qué sistema encaja, tiempos tentativos y qué evidencia queda.
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>Propuesta</strong>
+                  Entregables, criterio de cierre y forma de trabajo. Recién ahí se decide.
+                </div>
+              </li>
+              <li>
+                <span>04</span>
+                <div>
+                  <strong>Kickoff</strong>
+                  Arranque con hitos, canal de trabajo y las cinco etapas del protocolo.
+                </div>
+              </li>
+            </ol>
+            <ul class="contact-facts">
+              <li>
+                <span>Correo de presupuesto</span>
+                <a href="mailto:presupuesto@dev-cen.com">presupuesto@dev-cen.com</a>
+              </li>
+              <li>
+                <span>WhatsApp / teléfono</span>
+                <a class="wa-line" href="https://wa.me/5492914021589">
+                  <svg class="wa-mark" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12.04 2c-5.46 0-9.91 4.4-9.91 9.82 0 1.73.46 3.43 1.33 4.93L2 22l5.42-1.42a10.1 10.1 0 0 0 4.62 1.12h.04c5.46 0 9.91-4.4 9.91-9.82C21.99 6.4 17.5 2 12.04 2zm5.89 13.94c-.25.7-1.45 1.28-2.01 1.36-.51.07-1.16.13-1.87-.12-.43-.15-1-.32-1.73-.63-3.05-1.32-5.04-4.4-5.19-4.6-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.52.27-.3.6-.37.8-.37.2 0 .39 0 .56.01.18.01.42-.07.66.5.25.58.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.07 1.32 2.36 1.47.3.15.46.13.64-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.71.8 2 .95.3.15.5.22.57.34.07.13.07.73-.18 1.43z"/>
+                  </svg>
+                  +54 9 291 402-1589
+                </a>
+              </li>
+              <li>
+                <span>Cómo contestamos</span>
+                En uno o dos días te devolvemos un alcance: qué entra, qué no, y un estimado para que decidas sin apuro.
+              </li>
+            </ul>
+            <a
+              class="btn btn-ghost contact-wa"
+              href="https://wa.me/5492914021589?text=Hola%20DevCen%2C%20quiero%20consultar%20un%20presupuesto."
+            >
+              <svg class="wa-mark" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.4-9.91 9.82 0 1.73.46 3.43 1.33 4.93L2 22l5.42-1.42a10.1 10.1 0 0 0 4.62 1.12h.04c5.46 0 9.91-4.4 9.91-9.82C21.99 6.4 17.5 2 12.04 2zm5.89 13.94c-.25.7-1.45 1.28-2.01 1.36-.51.07-1.16.13-1.87-.12-.43-.15-1-.32-1.73-.63-3.05-1.32-5.04-4.4-5.19-4.6-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.52.27-.3.6-.37.8-.37.2 0 .39 0 .56.01.18.01.42-.07.66.5.25.58.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.07 1.32 2.36 1.47.3.15.46.13.64-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.71.8 2 .95.3.15.5.22.57.34.07.13.07.73-.18 1.43z"/>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <p class="form-kicker">Canal de presupuesto</p>
+            <label>
+              Nombre
+              <input name="nombre" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Organización
+              <input name="organizacion" type="text" autocomplete="organization" />
+            </label>
+            <label>
+              Teléfono
+              <input name="telefono" type="tel" autocomplete="tel" placeholder="+54 9 …" />
+            </label>
+            <label class="full">
+              Servicio de interés
+              <select name="servicio">
+                <option value="">Todavía no lo tengo claro</option>
+                <option>Creación de aplicaciones</option>
+                <option>Campus virtuales</option>
+                <option>Automatización para empresas</option>
+                <option>Sistemas de gestión integrada ISO</option>
+                <option>Páginas web</option>
+                <option>Plataformas corporativas</option>
+              </select>
+            </label>
+            <label class="full">
+              ¿Qué necesita el sistema?
+              <textarea name="mensaje" rows="4" required placeholder="Contexto, problema actual y para cuándo lo necesitan."></textarea>
+            </label>
+            <button class="btn btn-primary full" type="submit">Pedir presupuesto por correo</button>
+            <p class="form-hint">Se abre tu cliente de correo hacia presupuesto@dev-cen.com. Si no se abre, escribí directo o usá WhatsApp.</p>
+            <p class="form-note" id="form-note" hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#inicio">
+          <img src="assets/mark.svg" alt="" width="32" height="32" />
+          <span>
+            <strong>DEVCEN</strong>
+            <small>CONNECTED SYSTEMS</small>
+          </span>
+        </a>
+        <p>
+          © <span id="year"></span> DevCen ·
+          <a href="mailto:presupuesto@dev-cen.com">presupuesto@dev-cen.com</a>
+          ·
+          <a href="https://wa.me/5492914021589">+54 9 291 402-1589</a>
+        </p>
+      </div>
+    </footer>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" type="submit" id="dialog-close" aria-label="Cerrar">×</button>
+      </form>
+      <div class="slide-stage">
+        <img id="dialog-image" alt="" />
+        <button type="button" class="slide-nav prev" id="slide-prev" aria-label="Foto anterior">‹</button>
+        <button type="button" class="slide-nav next" id="slide-next" aria-label="Foto siguiente">›</button>
+        <p class="slide-caption" id="slide-caption"></p>
+        <div class="slide-dots" id="slide-dots"></div>
+      </div>
+      <div class="dialog-body">
+        <p class="eyebrow" id="dialog-kicker"></p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-text"></p>
+      </div>
+    </dialog>
+
+    <canvas id="spark-canvas" aria-hidden="true"></canvas>
+    <script src="js/main.js"></script>
+  </body>
+</html>
