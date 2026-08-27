@@ -7,5 +7,9 @@
   "assets": {
     "directory": ".",
     "html_handling": "auto-trailing-slash"
-  }
+  },
+  "routes": [
+    { "pattern": "www.dev-cen.com", "custom_domain": true },
+    { "pattern": "dev-cen.com", "custom_domain": true }
+  ]
 }
