@@ -23,13 +23,31 @@ window.addEventListener("resize", syncScrollProgress);
 toggle.addEventListener("click", () => {
   const open = nav.classList.toggle("is-open");
   toggle.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("nav-open", open);
+  const scrim = document.getElementById("nav-scrim");
+  if (scrim) scrim.hidden = !open;
 });
 
+function closeNav() {
+  nav.classList.remove("is-open");
+  toggle.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("nav-open");
+  const scrim = document.getElementById("nav-scrim");
+  if (scrim) scrim.hidden = true;
+}
+
 nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    toggle.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", closeNav);
+});
+
+document.querySelectorAll(".mobile-dock a").forEach((link) => {
+  link.addEventListener("click", closeNav);
+});
+
+document.getElementById("nav-scrim")?.addEventListener("click", closeNav);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeNav();
 });
 
 const projects = {
@@ -292,7 +310,7 @@ function initSparks() {
   });
 }
 
-const railLinks = document.querySelectorAll(".section-rail a");
+const railLinks = document.querySelectorAll(".section-rail a, .mobile-dock a");
 const observed = document.querySelectorAll("main section[id]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -495,7 +513,8 @@ function initProtocol() {
 
 initProtocol();
 
-if (!reduceMotion) {
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+if (!reduceMotion && finePointer) {
   document.querySelectorAll(".work-tile, .contact-form, .sat").forEach((card) => {
     card.addEventListener("mousemove", (event) => {
       const box = card.getBoundingClientRect();
