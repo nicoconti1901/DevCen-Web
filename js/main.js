@@ -229,18 +229,21 @@ function initSparks() {
 
   function spawn() {
     sparks.length = 0;
-    const count = Math.max(140, Math.floor((width * height) / 9000));
+    const mobile = window.matchMedia("(max-width: 960px)").matches;
+    const count = mobile
+      ? Math.max(48, Math.floor((width * height) / 24000))
+      : Math.max(140, Math.floor((width * height) / 9000));
     for (let i = 0; i < count; i += 1) {
       sparks.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.55,
-        vy: (Math.random() - 0.5) * 0.55,
-        r: Math.random() > 0.78 ? 3.2 : Math.random() * 1.8 + 0.8,
-        glow: Math.random() > 0.32,
+        vx: (Math.random() - 0.5) * (mobile ? 0.35 : 0.55),
+        vy: (Math.random() - 0.5) * (mobile ? 0.35 : 0.55),
+        r: Math.random() > 0.78 ? (mobile ? 2.2 : 3.2) : Math.random() * (mobile ? 1.2 : 1.8) + 0.6,
+        glow: Math.random() > (mobile ? 0.55 : 0.32),
         life: Math.random() * Math.PI * 2,
         speed: 0.012 + Math.random() * 0.02,
-        streak: Math.random() > 0.82,
+        streak: !mobile && Math.random() > 0.82,
       });
     }
   }

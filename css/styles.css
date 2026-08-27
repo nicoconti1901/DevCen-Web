@@ -2584,6 +2584,10 @@ body.nav-open {
     padding: 64px 0;
   }
 
+  #spark-canvas {
+    opacity: 0.22;
+  }
+
   .section::before {
     top: 56px;
     left: 14px;
