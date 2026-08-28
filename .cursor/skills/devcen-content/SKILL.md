@@ -26,7 +26,7 @@ No presentar a DevCen como consultora de certificación ISO ni como desarrollado
 
 ## Frases institucionales (aprobadas)
 
-- Comercial: **Presupuesto por etapas con entregables y hitos acordados**
+- Comercial: **Presupuesto por etapas con entregables e hitos acordados**
 - Banner: **Demo sin cargo para validar la solución antes de construir**
 - Hero: **Diseñamos y operamos plataformas corporativas** / **que conectan personas, procesos y datos.**
 
