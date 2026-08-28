@@ -1,0 +1,22 @@
+---
+description: Contexto del proyecto DevCen Connected Systems y skills del repo
+alwaysApply: true
+---
+
+# DevCen — proyecto
+
+Sitio estático de marketing en español: `index.html`, `css/styles.css`, `js/main.js`, tema claro vía `js/theme.js` + `css/theme-light.css`. Deploy en Cloudflare Workers (`wrangler.jsonc`).
+
+## Skills del proyecto (leer según la tarea)
+
+| Tarea | Skill |
+|-------|-------|
+| HTML, CSS, JS, temas, mobile, UI | `.cursor/skills/devcen-web/SKILL.md` |
+| Copy, headlines, ticker, voz de marca | `.cursor/skills/devcen-content/SKILL.md` |
+| Deploy, wrangler, dominio, producción | `.cursor/skills/devcen-deploy/SKILL.md` |
+
+## Convenciones rápidas
+
+- Producción: editar `index.html` / `styles.css` / `main.js`, no solo preview.
+- Commits en español; no commitear salvo pedido explícito.
+- Contacto: `presupuesto@dev-cen.com`, WhatsApp `+54 9 291 402-1589`.
