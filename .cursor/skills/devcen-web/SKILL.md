@@ -82,5 +82,6 @@ python -m http.server 5173
 
 ## Skills complementarios del proyecto
 
+- **Frontend y diseño web:** `devcen-frontend` (UI, layout, tipografía, temas visuales)
 - Deploy: `devcen-deploy`
 - Copy: `devcen-content`

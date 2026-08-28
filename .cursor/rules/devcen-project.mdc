@@ -11,7 +11,8 @@ Sitio estático de marketing en español: `index.html`, `css/styles.css`, `js/ma
 
 | Tarea | Skill |
 |-------|-------|
-| HTML, CSS, JS, temas, mobile, UI | `.cursor/skills/devcen-web/SKILL.md` |
+| **UI, diseño web, layout, tipografía, temas visuales** | `.cursor/skills/devcen-frontend/SKILL.md` |
+| HTML, CSS, JS, mobile, comportamiento del sitio | `.cursor/skills/devcen-web/SKILL.md` |
 | Copy, headlines, ticker, voz de marca | `.cursor/skills/devcen-content/SKILL.md` |
 | Deploy, wrangler, dominio, producción | `.cursor/skills/devcen-deploy/SKILL.md` |
 
