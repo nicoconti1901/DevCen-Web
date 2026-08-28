@@ -30,7 +30,8 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=3" />
+    <script src="js/theme.js"></script>
   </head>
   <body>
     <div class="scroll-spine" aria-hidden="true">
@@ -51,8 +52,8 @@
     <header class="site-header" id="header">
       <div class="header-inner">
         <a class="brand" href="#inicio">
-          <img src="assets/mark.svg" alt="" width="36" height="36" />
-          <span>
+          <img class="brand-mark" src="assets/mark.svg" alt="" width="36" height="36" />
+          <span class="brand-text">
             <strong>DEVCEN</strong>
             <small>CONNECTED SYSTEMS</small>
           </span>
@@ -73,18 +74,6 @@
             </circle>
           </svg>
         </div>
-        <button
-          class="nav-toggle"
-          id="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Abrir menú</span>
-        </button>
         <nav class="site-nav" id="site-nav" aria-label="Principal">
           <a href="#proyectos"><i>01</i> Trabajos</a>
           <a href="#iso"><i>02</i> ISO</a>
@@ -92,15 +81,57 @@
           <a href="#metodo"><i>04</i> Método</a>
           <a href="#contacto"><i>05</i> Enlace</a>
         </nav>
+        <div class="theme-switch theme-switch-desktop" role="group" aria-label="Tema visual">
+          <button type="button" class="theme-switch-btn is-active" data-theme="dark" aria-pressed="true" aria-label="Tema oscuro" title="Tema oscuro">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme="light" aria-pressed="false" aria-label="Tema claro" title="Tema claro">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
         <p class="nav-ticker" aria-live="polite">
           <span id="nav-ticker"></span>
         </p>
+        <div class="header-actions">
+          <div class="theme-switch theme-switch-mobile" role="group" aria-label="Tema visual">
+            <button type="button" class="theme-switch-btn is-active" data-theme="dark" aria-pressed="true" aria-label="Tema oscuro" title="Tema oscuro">
+              <svg class="theme-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button type="button" class="theme-switch-btn" data-theme="light" aria-pressed="false" aria-label="Tema claro" title="Tema claro">
+              <svg class="theme-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sr-only">Abrir menú</span>
+          </button>
+        </div>
       </div>
     </header>
 
     <aside class="sticky-banner" id="sticky-banner">
-      <p class="pay-motto">Presupuesto por etapas con entregables y hitos acordados</p>
-      <p id="sticky-copy">Demo sin cargo para validar la solución antes de construir.</p>
+      <div class="sticky-banner-inner">
+        <p class="pay-motto">Presupuesto por etapas con entregables y hitos acordados</p>
+        <p id="sticky-copy">Demo sin cargo para validar la solución antes de construir.</p>
+      </div>
       <button type="button" class="sticky-close" id="sticky-close" aria-label="Cerrar aviso">×</button>
     </aside>
 
@@ -527,22 +558,22 @@
               </li>
             </ol>
             <ul class="contact-facts">
-              <li>
-                <span>Correo de presupuesto</span>
-                <a href="mailto:presupuesto@dev-cen.com">presupuesto@dev-cen.com</a>
+              <li class="contact-fact contact-fact-email">
+                <span class="contact-fact-label">Correo de presupuesto</span>
+                <a class="contact-fact-value" href="mailto:presupuesto@dev-cen.com">presupuesto@dev-cen.com</a>
               </li>
-              <li>
-                <span>WhatsApp / teléfono</span>
-                <a class="wa-line" href="https://wa.me/5492914021589">
+              <li class="contact-fact contact-fact-phone">
+                <span class="contact-fact-label">WhatsApp / teléfono</span>
+                <a class="contact-fact-value wa-line" href="https://wa.me/5492914021589">
                   <svg class="wa-mark" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12.04 2c-5.46 0-9.91 4.4-9.91 9.82 0 1.73.46 3.43 1.33 4.93L2 22l5.42-1.42a10.1 10.1 0 0 0 4.62 1.12h.04c5.46 0 9.91-4.4 9.91-9.82C21.99 6.4 17.5 2 12.04 2zm5.89 13.94c-.25.7-1.45 1.28-2.01 1.36-.51.07-1.16.13-1.87-.12-.43-.15-1-.32-1.73-.63-3.05-1.32-5.04-4.4-5.19-4.6-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.52.27-.3.6-.37.8-.37.2 0 .39 0 .56.01.18.01.42-.07.66.5.25.58.85 2.07.92 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.07 1.32 2.36 1.47.3.15.46.13.64-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.71.8 2 .95.3.15.5.22.57.34.07.13.07.73-.18 1.43z"/>
                   </svg>
-                  +54 9 291 402-1589
+                  <span class="wa-number">+54 9 291 402-1589</span>
                 </a>
               </li>
-              <li>
-                <span>Cómo contestamos</span>
-                En uno o dos días te devolvemos un alcance: qué entra, qué no, y un estimado para que decidas sin apuro.
+              <li class="contact-fact contact-fact-reply">
+                <span class="contact-fact-label">Cómo contestamos</span>
+                <p class="contact-fact-copy">En uno o dos días te devolvemos un alcance: qué entra, qué no, y un estimado para que decidas sin apuro.</p>
               </li>
             </ul>
             <a
@@ -600,8 +631,8 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <a class="brand" href="#inicio">
-          <img src="assets/mark.svg" alt="" width="32" height="32" />
-          <span>
+          <img class="brand-mark" src="assets/mark.svg" alt="" width="32" height="32" />
+          <span class="brand-text">
             <strong>DEVCEN</strong>
             <small>CONNECTED SYSTEMS</small>
           </span>

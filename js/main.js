@@ -250,6 +250,7 @@ function initSparks() {
 
   function draw() {
     ctx.clearRect(0, 0, width, height);
+    const light = document.documentElement.classList.contains("theme-light");
     sparks.forEach((spark) => {
       spark.x += spark.vx;
       spark.y += spark.vy;
@@ -261,10 +262,12 @@ function initSparks() {
       const pulse = 0.45 + Math.abs(Math.sin(spark.life)) * 0.55;
       if (spark.streak) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(255, 138, 31, ${0.35 + pulse * 0.45})`;
-        ctx.lineWidth = 1.4;
-        ctx.shadowColor = "#ff6a00";
-        ctx.shadowBlur = 14;
+        ctx.strokeStyle = light
+          ? `rgba(217, 79, 0, ${0.28 + pulse * 0.42})`
+          : `rgba(255, 138, 31, ${0.35 + pulse * 0.45})`;
+        ctx.lineWidth = light ? 1.6 : 1.4;
+        ctx.shadowColor = light ? "#d94f00" : "#ff6a00";
+        ctx.shadowBlur = light ? 16 : 14;
         ctx.moveTo(spark.x, spark.y);
         ctx.lineTo(spark.x - spark.vx * 18, spark.y - spark.vy * 18);
         ctx.stroke();
@@ -272,10 +275,16 @@ function initSparks() {
       }
       ctx.beginPath();
       ctx.fillStyle = spark.glow
-        ? `rgba(255, 138, 31, ${0.55 + pulse * 0.45})`
-        : `rgba(244, 241, 234, ${0.28 + pulse * 0.4})`;
-      ctx.shadowColor = spark.glow ? "#ff6a00" : "rgba(255, 255, 255, 0.4)";
-      ctx.shadowBlur = spark.glow ? 18 * pulse : 8;
+        ? light
+          ? `rgba(232, 93, 4, ${0.58 + pulse * 0.42})`
+          : `rgba(255, 138, 31, ${0.55 + pulse * 0.45})`
+        : light
+          ? `rgba(28, 26, 24, ${0.16 + pulse * 0.28})`
+          : `rgba(244, 241, 234, ${0.28 + pulse * 0.4})`;
+      ctx.shadowColor = spark.glow
+        ? light ? "#d94f00" : "#ff6a00"
+        : light ? "rgba(217, 79, 0, 0.35)" : "rgba(255, 255, 255, 0.4)";
+      ctx.shadowBlur = spark.glow ? (light ? 22 : 18) * pulse : light ? 10 : 8;
       ctx.arc(spark.x, spark.y, spark.r * pulse, 0, Math.PI * 2);
       ctx.fill();
       ctx.shadowBlur = 0;
@@ -290,8 +299,10 @@ function initSparks() {
         const dist = Math.hypot(dx, dy);
         if (dist < 120 && (a.glow || b.glow)) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(255, 106, 0, ${0.18 * (1 - dist / 120)})`;
-          ctx.lineWidth = 1;
+          ctx.strokeStyle = light
+            ? `rgba(217, 79, 0, ${0.22 * (1 - dist / 120)})`
+            : `rgba(255, 106, 0, ${0.18 * (1 - dist / 120)})`;
+          ctx.lineWidth = light ? 1.1 : 1;
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
           ctx.stroke();
@@ -537,15 +548,43 @@ if (!reduceMotion && finePointer) {
 
 const tickerEl = document.getElementById("nav-ticker");
 const tickerPhrases = [
-  "Plataformas que el equipo usa todos los días.",
-  "Un portal unifica lo que hoy está repartido.",
-  "Medir bien es decidir con datos, no con intuición.",
+  "Plataformas que el equipo usa a diario.",
+  "Un portal unifica lo disperso.",
+  "Medir bien es decidir con datos.",
 ];
+
+function lockTickerWidth(phrases) {
+  const ticker = document.querySelector(".nav-ticker");
+  if (!ticker || !phrases.length) return;
+
+  const probe = document.createElement("span");
+  probe.setAttribute("aria-hidden", "true");
+  probe.style.cssText =
+    "position:absolute;visibility:hidden;white-space:nowrap;pointer-events:none;font:inherit;letter-spacing:inherit;";
+  const styles = getComputedStyle(ticker);
+  probe.style.fontFamily = styles.fontFamily;
+  probe.style.fontSize = styles.fontSize;
+  probe.style.letterSpacing = styles.letterSpacing;
+
+  let maxW = 0;
+  phrases.forEach((phrase) => {
+    probe.textContent = `> ${phrase}`;
+    ticker.appendChild(probe);
+    maxW = Math.max(maxW, probe.offsetWidth);
+    ticker.removeChild(probe);
+  });
+
+  const w = `${maxW}px`;
+  ticker.style.width = w;
+  ticker.style.minWidth = w;
+  ticker.style.maxWidth = w;
+}
 
 function fadeRotate(el, phrases, hold = 5200, fadeMs = 450) {
   if (!el) return;
   let p = 0;
   el.textContent = phrases[0];
+  lockTickerWidth(phrases);
   if (reduceMotion) return;
   window.setInterval(() => {
     p = (p + 1) % phrases.length;
@@ -558,6 +597,14 @@ function fadeRotate(el, phrases, hold = 5200, fadeMs = 450) {
 }
 
 fadeRotate(tickerEl, tickerPhrases);
+
+if (document.fonts?.ready) {
+  document.fonts.ready.then(() => lockTickerWidth(tickerPhrases));
+}
+
+window.addEventListener("resize", () => {
+  window.requestAnimationFrame(() => lockTickerWidth(tickerPhrases));
+});
 
 const stickyCopy = document.getElementById("sticky-copy");
 const stickyPhrases = [
