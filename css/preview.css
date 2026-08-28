@@ -1,0 +1,114 @@
+.preview-flag {
+  position: fixed;
+  top: calc(var(--header-h) + var(--banner-h));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  margin: 0;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 106, 0, 0.55);
+  background: rgba(12, 12, 12, 0.96);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange-hot);
+  pointer-events: none;
+}
+
+.nav-ticker {
+  max-width: min(52ch, 38vw);
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.nav-ticker #nav-ticker {
+  display: inline-block;
+  min-height: 1.2em;
+  transition: opacity 0.45s ease;
+}
+
+.nav-ticker #nav-ticker.is-fading {
+  opacity: 0;
+}
+
+.work-tile[data-project="plataforma"] {
+  order: -3;
+  box-shadow:
+    0 0 0 1px rgba(255, 106, 0, 0.65),
+    0 0 32px rgba(255, 106, 0, 0.22),
+    0 22px 48px rgba(0, 0, 0, 0.42);
+}
+
+.work-tile[data-project="app"] {
+  order: -2;
+}
+
+.work-tile[data-project="auto"] {
+  order: -1;
+}
+
+.work-tile[data-project="iso"] {
+  opacity: 0.92;
+}
+
+.work-board {
+  display: grid;
+}
+
+.who-lead {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.who-lead .team-pill {
+  justify-self: start;
+}
+
+.who-lead-copy {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+.team-pill {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 106, 0, 0.4);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange-hot);
+}
+
+.hero-focus {
+  display: inline-block;
+  margin: 14px 0 0;
+  padding: 6px 12px;
+  border-left: 2px solid var(--orange);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--silver);
+}
+
+.iso-section .lead strong {
+  color: var(--heading);
+}
+
+@media (max-width: 960px) {
+  .preview-flag {
+    display: none;
+  }
+
+  .nav-ticker {
+    display: none;
+  }
+}
